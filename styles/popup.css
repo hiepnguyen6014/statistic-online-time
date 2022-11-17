@@ -7,15 +7,36 @@ body {
   font-family: 'Baloo 2', cursive !important;
 }
 
-.main {
+main {
+  position: relative;
+  display: inline-block;
   width: 300px;
-  height: 200px;
+  height: 246px;
+  padding: 10px;
+  border-radius: 2px;
   box-shadow: 0 0 3px 0 black;
 }
 
-.header {
-  padding: 10px;
+header {
   font-size: 20px;
   font-weight: 600;
   text-align: center;
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.footer__author {
+  line-height: 12px;
+  font-size: 12px;
+}
+
+.footer__name {
+  padding-right: 6px;
+  line-height: 12px;
+  font-size: 12px;
+  font-weight: 500;
 }
