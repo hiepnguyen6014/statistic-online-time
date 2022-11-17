@@ -1,0 +1,50 @@
+{
+  "name": "Statistic Online Time",
+  "version": "0.0.1",
+  "author": "hiepnguyen6014",
+  "manifest_version": 3,
+  "description": "Collect online time of user at Social Media and show statistic",
+  "icons": {
+    "16": "images/analysis_18.png",
+    "32": "images/analysis_32.png",
+    "48": "images/analysis_32.png",
+    "128": "images/analysis_32.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "images/analysis_18.png",
+      "32": "images/analysis_32.png"
+    },
+    "default_title": "Statistic Online Time",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+  "homepage_url": "https://daihiep.co",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*"
+      ],
+      "js": [
+        "scripts/content.js"
+      ],
+      "css": [
+        "styles/popup.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": [
+    "https://www.facebook.com/*",
+    "https://www.youtube.com/*"
+  ],
+  "optional_permissions": [
+    "storage",
+    "activeTab",
+    "tabs",
+    "webNavigation",
+    "webRequest"
+  ]
+}
